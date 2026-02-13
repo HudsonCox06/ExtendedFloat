@@ -4,9 +4,8 @@ import java.math.BigInteger;
  * 1024-bit mantissa (64 bit x 16) and an integer exponent. It supports basic arithmetic,
  * comparisons, conversion to double, and special IEEE-style values (ZERO, INFINITY, NAN).
  * 
- * Most arithmetic operations currently fall back to double for simplicity,
- * while the class structure and mantissa helpers are designed to support a 
- * future full-precision big-float implementation.
+ * Multiplication operations are handled limb-by-limb
+ * Division operations are handled using BigInteger for simplicity and accuracy
  **/
 public class ExtendedFloat{ 
 
